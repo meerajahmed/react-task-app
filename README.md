@@ -1,2 +1,2 @@
 # react-task-app
-React Task App
+Learning react by building a Task App
