@@ -1,3 +1,6 @@
-/**
- * Created by meeahmed on 8/9/2018.
- */
+import {createStore} from 'redux';
+import {devToolsEnhancer} from 'redux-devtools-extension';
+
+import reducer from '../reducers/tasks';
+
+export default createStore(reducer, devToolsEnhancer());
