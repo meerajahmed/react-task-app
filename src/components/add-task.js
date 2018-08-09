@@ -26,7 +26,7 @@ export default class AddTask extends Component {
     this.setState(() => ({description}));
   };
 
-  handleSaveTask = (event) => {
+  handleAddTask = (event) => {
     event.preventDefault();
     if (this.state.title ||
       this.state.description) {
@@ -36,7 +36,7 @@ export default class AddTask extends Component {
         description: this.state.description,
         status: TASK_NOT_STARTED
       };
-      this.props.handleSaveTask(task);
+      this.props.handleAddTask(task);
       this.setState(() => ({
         title: '',
         description: '',
@@ -54,16 +54,16 @@ export default class AddTask extends Component {
         </div>
         {
           this.state.isFormVisible && (
-            <form className="mt-3" onSubmit={this.handleSaveTask}>
+            <form className="mt-3" onSubmit={this.handleAddTask}>
               <div className="form-group">
                 <input type="text" className="form-control" placeholder="title" value={this.state.title}
                        onChange={(event) => this.handleTitleChange(event.target.value)}
                 />
               </div>
               <div className="form-group">
-              <textarea className="form-control" placeholder="description"
-                        value={this.state.description}
-                        onChange={(event) => this.handleDescriptionChange(event.target.value)}/>
+                <textarea className="form-control" placeholder="description"
+                          value={this.state.description}
+                          onChange={(event) => this.handleDescriptionChange(event.target.value)}/>
               </div>
               <button type="submit" className="btn btn-outline-success">Save</button>
             </form>
