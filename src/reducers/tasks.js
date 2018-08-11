@@ -1,9 +1,7 @@
 import {ADD_TASK} from '../actions/addTask';
 import {UPDATE_TASK_STATUS} from '../actions/updateTaskStatus';
 
-const defaultState = [];
-
-export default (state = defaultState, {type, payload}) => {
+export default (state, {type, payload}) => {
   switch (type) {
 
     case ADD_TASK:

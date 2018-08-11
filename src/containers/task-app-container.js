@@ -1,13 +1,13 @@
 import {connect} from "react-redux";
 
 import TaskApp from "../components/task-app";
-import addTask from "../actions/addTask";
 import updateTaskStatus from "../actions/updateTaskStatus";
+import addTaskAsync from "../actions/addTaskAsync";
 
 const mapStateToProps = (state) => ({tasks: state});
 
 const mapDispatchToProps = (dispatch) => ({
-  handleAddTask: (task) => dispatch(addTask(task)),
+  handleAddTask: (task) => dispatch(addTaskAsync(task)),
   handleStatusChange: (id, status) => dispatch(updateTaskStatus(id, status))
 });
 
