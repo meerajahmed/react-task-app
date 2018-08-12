@@ -1,6 +1,6 @@
-export const ADD_TASK = 'ADD_TASK';
+export const ADD_TASK_ASYNC = 'ADD_TASK_ASYNC';
 
-const addTask = (task) => ({
-  type: ADD_TASK,
+export default (task) => ({
+  type: ADD_TASK_ASYNC,
   payload: {task}
 });
